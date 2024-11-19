@@ -11,3 +11,277 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* src/index.css */
+
+.game-container {
+  text-align: center;
+}
+
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.discard-pile {
+  margin: 20px 0;
+}
+
+.players-area {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.player-hand {
+  margin: 10px;
+}
+
+.hand {
+  display: flex;
+  gap: 5px;
+}
+
+.card-back {
+  width: 50px;
+  height: 80px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* in your CSS file */
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iframe-container {
+  width: 90%;
+  position: absolute;
+  top: 52vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* max-width: 600px; Adjust based on screen size */
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.gaming-chat-icon {
+  width: 10vw;
+  height: auto;
+  position: absolute;
+  right: 15%;
+  top: 12vh;
+  z-index: 30;
+}
+
+.join-game-button {
+  position: absolute;
+  left: 5%;
+  top: 12vh;
+  z-index: 10;
+}
+
+.join-game-input {
+  top: 9vh;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add this to your CSS file */
+
+.chatbox {
+  height: 50vh;
+  position: absolute;
+  /* bottom: 20px;
+  right: 20px; */
+  bottom: -10vh;
+  width: 80vw;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+
+.messages {
+  height: 35vh;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.message {
+  height: 3vh;
+  padding: 5px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.message:last-child {
+  border-bottom: none;
+}
+
+input[type="text"] {
+  width: calc(100% - 60px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+button {
+  padding: 8px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.game-button {
+  margin: 5vw;
+}
+
+.send-button {
+  margin: 1vh;
+}
+
+.back-button {
+  margin-top: 2vh;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  height: calc(100vh - 12vh);
+}
+
+.image-wrapper {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+}
+
+.gaming-wrapper {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  height: 100vh;
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+  background-color: #FBFBFB;
+}
+
+.searchbar-image {
+  position: absolute;
+  top: 6vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.profile-image {
+  width: 80vw;
+  height: auto;
+  position: absolute;
+  top: 15vh;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.radio-image {
+  width: 70vw;
+  height: auto;
+  position: absolute;
+  top: 31vh;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.skribbl-image {
+  width: 35vw;
+  height: auto;
+  position: absolute;
+  top: 54vh;
+  left: 23%;
+  transform: translate(-50%, -50%);
+}
+
+.skribbl-text {
+  position: absolute;
+  top: 40vh;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.gartic-text {
+  position: absolute;
+  top: 62vh;
+  left: 24.5%;
+  transform: translate(-50%, -50%);
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.gartic-image {
+  width: 35vw;
+  height: auto;
+  position: absolute;
+  top: 75vh;
+  left: 23%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome-title {
+  text-align: center;
+  position: absolute; /* Position the text relative to the container */
+  top: 2vh; /* Adjust as needed */
+  left: 50%; /* Center the text horizontally */
+  transform: translateX(-50%); /* Center alignment adjustment */
+  color: black; /* Adjust color to contrast the background */
+  font-size: 24px; /* Adjust font size as needed */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: Add shadow for better readability */
+  z-index: 2; /* Ensures the text stays above the image */
+}
+
+.footer-navbar {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  height: 10vh;
+  border-top-left-radius: 5vh; /* Top-left corner rounded */
+  border-top-right-radius: 5vh; /* Top-right corner rounded */
+  display: flex; /* Enable Flexbox */
+  justify-content: space-around; /* Distribute space evenly between images */
+  align-items: center; /* Align images vertically in the center */
+}
+
+.footer-navbar img {
+  margin-top: -1vh;
+  width: 8vw;; /* Adjust size of the icons */
+  height: auto; /* Maintain square proportions */
+  cursor: pointer; /* Change cursor on hover */
+}
