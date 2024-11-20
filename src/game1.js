@@ -9,7 +9,7 @@ import GamingActive from './GamingActive.png';
 
 //Change depending on where you are (home or campus)
 //HOME
-// const socket = io('http://192.168.1.69:4000'); 
+const socket = io('http://192.168.1.69:4000'); 
 //CAMPUS PROTECTED
 // const socket = io('http://100.83.85.165:4000');
 //HOTSPOT
@@ -18,8 +18,8 @@ import GamingActive from './GamingActive.png';
 // const socket = io('http://100.64.105.176:4000');
 //CAMPUS GUEST 2
 // const socket = io('http://100.64.98.154:4000');
-//EC2 INSTANCE
-const socket = io('http://54.218.212.231:4000');
+//EC2 INSTANCE (update whenever we launch the instance)
+// const socket = io('http://54.218.212.231:4000');
 
 function Game1({ onBack, onSelectGame }) {
 
@@ -39,6 +39,22 @@ function Game1({ onBack, onSelectGame }) {
       setInviteLink(""); // Clear the input field after joining
     }
   };
+
+  useEffect(() => {
+    // Join the room for Game1
+    socket.emit('joinRoom', 'game1'); // This already targets game1
+  
+    // Listen for chat messages in this room
+    // socket.on('chatMessage', (message) => {
+    //   setMessages((prevMessages) => [...prevMessages, message]);
+    // });
+  
+    return () => {
+      socket.off('chatMessage');
+    };
+  }, []);
+  
+
 
   useEffect(() => {
     // Listen for updated player list from the server
@@ -79,7 +95,8 @@ function Game1({ onBack, onSelectGame }) {
     if (newMessage.trim()) {
       const message = { text: newMessage, sender: `User ${socket.id.substring(0, 4)}` };
       console.log("Sending message to server:", message); // Log the actual message
-      socket.emit('sendMessage', message); // Emit the message to the server
+      // socket.emit('sendMessage', message); // Emit the message to the server
+      socket.emit('sendMessage', { room: 'game1', message });
       setNewMessage(""); // Clear the input field
     } else {
       console.log("Message is empty and will not be sent");
@@ -89,7 +106,7 @@ function Game1({ onBack, onSelectGame }) {
   return (
     <div className="game-container">
 
-      <div className="gaming-wrapper">
+      <div className="gaming-wrapper2">
 
         {/* <button onClick={onBack} className="back-button">Back to Home</button> */}
         

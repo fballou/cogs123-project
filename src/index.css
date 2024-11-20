@@ -185,6 +185,15 @@ button:hover {
 .gaming-wrapper {
   position: relative; /* Allows child elements to be positioned relative to this container */
   width: 100%; /* Adjust as needed */
+  height: 120vh;
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+  background-color: #FBFBFB;
+}
+
+.gaming-wrapper2 {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
   height: 100vh;
   /* max-width: 600px; Optional, to limit image size */
   margin: auto; /* Centers the container */
@@ -221,6 +230,32 @@ button:hover {
   height: auto;
   position: absolute;
   top: 54vh;
+  left: 23%;
+  transform: translate(-50%, -50%);
+}
+
+.skribbl-image2 {
+  width: 35vw;
+  height: auto;
+  position: absolute;
+  top: 54vh;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.skribbl-image3 {
+  width: 35vw;
+  height: auto;
+  position: absolute;
+  top: 75vh;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+.skribbl-image4 {
+  width: 35vw;
+  height: auto;
+  position: absolute;
+  top: 95vh;
   left: 23%;
   transform: translate(-50%, -50%);
 }

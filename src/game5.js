@@ -21,7 +21,7 @@ const socket = io('http://192.168.1.69:4000');
 //EC2 INSTANCE (update whenever we launch the instance)
 // const socket = io('http://54.218.212.231:4000');
 
-function Game2({ onBack, onSelectGame }) {
+function Game5({ onBack, onSelectGame }) {
 
   const [iframeSrc, setIframeSrc] = useState("https://skribbl.io/");
   const [inviteLink, setInviteLink] = useState("");
@@ -42,7 +42,7 @@ function Game2({ onBack, onSelectGame }) {
 
   useEffect(() => {
     // Join the room for Game2
-    socket.emit('joinRoom', 'game2'); // Changed to game2 for separation
+    socket.emit('joinRoom', 'game5'); // Changed to game2 for separation
   
     // Listen for chat messages in this room
     // socket.on('chatMessage', (message) => {
@@ -95,7 +95,7 @@ function Game2({ onBack, onSelectGame }) {
       const message = { text: newMessage, sender: `User ${socket.id.substring(0, 4)}` };
       console.log("Sending message to server:", message); // Log the actual message
       // socket.emit('sendMessage', message); // Emit the message to the server
-      socket.emit('sendMessage', { room: 'game2', message });
+      socket.emit('sendMessage', { room: 'game5', message });
       setNewMessage(""); // Clear the input field
     } else {
       console.log("Message is empty and will not be sent");
@@ -185,4 +185,4 @@ function Game2({ onBack, onSelectGame }) {
   );
 }
 
-export default Game2;
+export default Game5;

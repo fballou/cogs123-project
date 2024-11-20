@@ -22,9 +22,12 @@ function GamingPage({ onSelectGame }) {
         {/* <button className="game-button" onClick={() => onSelectGame('game2')}>Go to Game 2</button> */}
         {/* Add more links to other games if needed */}
         <p className="skribbl-text">Play Skribbl</p>
-        <img src={Skribbl} alt="Skribble Game Card" className="skribbl-image" onClick={() => onSelectGame('game1')} />
-        <p className="gartic-text">Play Gartic Phone</p>
-        <img src={GarticPhone} alt="Gartic Phone Game Card" className="gartic-image" onClick={() => onSelectGame('game2')} />
+        <img src={Skribbl} alt="Skribbl Game Card" className="skribbl-image" onClick={() => onSelectGame('game1')} />
+        {/* <p className="gartic-text">Play Gartic Phone</p> */}
+        <img src={Skribbl} alt="Skribbl Game Card" className="gartic-image" onClick={() => onSelectGame('game2')} />
+        <img src={Skribbl} alt="Skribbl Game Card" className="skribbl-image2" onClick={() => onSelectGame('game3')} />
+        <img src={Skribbl} alt="Skribbl Game Card" className="skribbl-image3" onClick={() => onSelectGame('game4')} />
+        <img src={Skribbl} alt="Skribbl Game Card" className="skribbl-image4" onClick={() => onSelectGame('game5')} />
         <div className="footer-navbar">
           {/* <h1>Testing</h1> */}
           <img src={Home} alt="Home Icon" onClick={() => onSelectGame('home')}/>
