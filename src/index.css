@@ -320,3 +320,125 @@ button:hover {
   height: auto; /* Maintain square proportions */
   cursor: pointer; /* Change cursor on hover */
 }
+
+.leaderboard-header {
+  display: flex; /* Enables Flexbox layout */
+  align-items: center; /* Vertically centers items */
+  justify-content: space-between; /* Ensures items are at edges */
+  padding: 8vw; /* Optional: Adds padding for better spacing */
+  position: relative; /* Ensures it stays at the top */
+}
+
+.leaderboard {
+  margin: 0 auto; /* Centers the text within the flex container */
+  font-size: 2rem; /* Adjust the size as needed */
+  text-align: center;
+}
+
+.leaderboard-header img {
+  height: auto; /* Adjust the size of the icon */
+  width: 6vw;
+  cursor: pointer; /* Optional: Makes the icon clickable */
+}
+
+.leaderboard-players {
+  /* display: flex; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5vh;
+}
+
+.your-place {
+  margin-top: 5vh;
+}
+
+.gaming-wrapper3 {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  height: 105vh;
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+  background-color: #FBFBFB;
+}
+
+.gaming-wrapper4 {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  height: 100vh;
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+  background-color: #FBFBFB;
+}
+
+.joining-page {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 40vh; /* Ensures the container takes the full height of the viewport */
+}
+
+.skribbl-img {
+  width: 90vw;
+  height: auto;
+  margin-top: 20vh;
+}
+
+.game-buttons {
+  width: 50vw;
+  padding: 2vw 4vw;
+  font-size: 1.1rem;
+  border-radius: 2vw;
+  border: 0.5vw solid #ccc;
+  background-color: #fff;
+  cursor: pointer;
+  color: black;
+}
+
+.joining-instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 10vh; /* Ensures the container takes the full height of the viewport */
+  text-align: center;
+}
+.instructions-header {
+  margin-top: 8vh;
+}
+.instructions-img {
+  width: 90%;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-top: 5vh;
+}
+
+.continue-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+.continue-button {
+  width: 50vw;
+  height: auto;
+  font-size: 1.1rem;
+  background-color: #9AC4F2;
+  color: black;
+  border-radius: 2vw;
+  border: 0.5vw solid #95abf3;
+  cursor: pointer;
+}
+
+.gaming-wrapper5 {
+  position: relative; /* Allows child elements to be positioned relative to this container */
+  width: 100%; /* Adjust as needed */
+  height: 130vh;
+  /* max-width: 600px; Optional, to limit image size */
+  margin: auto; /* Centers the container */
+  background-color: #FBFBFB;
+}

@@ -5,6 +5,7 @@ import Friends from './Friends.png';
 import Chat from './Chat.png';
 import Gaming from './Gaming.png';
 import SearchBar from './search_bar.png';
+import Leaderboard from './leaderboard_image.png';
 
 function RealHome({ onSelectGame }) {
   return (
@@ -16,9 +17,9 @@ function RealHome({ onSelectGame }) {
             <div className="footer-navbar">
                 {/* <h1>Testing</h1> */}
                 <img src={HomeActive} alt="Active Home Icon"/>
-                <img src={Gaming} alt="Gaming Icon" onClick={() => onSelectGame('home2')}/>
+                <img src={Gaming} alt="Gaming Icon" onClick={() => onSelectGame('join')}/>
                 <img src={Chat} alt="Chat Icon"/>
-                <img src={Friends} alt="Friends Icon"/>
+                <img src={Leaderboard} alt="Leaderboard Icon" onClick={() => onSelectGame('leaderboard')}/>
             </div>
         </div>
       

@@ -6,6 +6,8 @@ import Home from './Home.png';
 import Friends from './Friends.png';
 import Chat from './Chat.png';
 import GamingActive from './GamingActive.png';
+import Leaderboard from './leaderboard_image.png';
+import ChatNumbers from './chat_numbers.png';
 
 //Change depending on where you are (home or campus)
 //HOME
@@ -137,7 +139,7 @@ function Game4({ onBack, onSelectGame }) {
         </ul>
 
         {/* <button onClick={toggleChat}>{chatOpen ? "Close Chat" : "Open Chat"}</button> */}
-        <img src={Chat} alt="Chat Icon" onClick={toggleChat} className="gaming-chat-icon"/>
+        <img src={ChatNumbers} alt="Chat Icon" onClick={toggleChat} className="gaming-chat-icon"/>
 
         {chatOpen && (
           <div className="chatbox">
@@ -174,9 +176,9 @@ function Game4({ onBack, onSelectGame }) {
         <div className="footer-navbar">
           {/* <h1>Testing</h1> */}
           <img src={Home} alt="Home Icon" onClick={() => onSelectGame('home')}/>
-          <img src={GamingActive} alt="ActiveGaming Icon" onClick={() => onSelectGame('home2')}/>
+          <img src={GamingActive} alt="ActiveGaming Icon" onClick={() => onSelectGame('join')}/>
           <img src={Chat} alt="Chat Icon"/>
-          <img src={Friends} alt="Friends Icon"/>
+          <img src={Leaderboard} alt="Leaderboard Icon" onClick={() => onSelectGame('leaderboard')}/>
         </div>
       </div>
       

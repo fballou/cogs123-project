@@ -37,6 +37,7 @@ const io = new Server(server, {
 });
 
 const rooms = {}; // Store chat messages per room
+const messageCounts = {};
 
 io.on('connection', (socket) => {
   console.log(`User connected: ${socket.id}`);
@@ -50,6 +51,9 @@ io.on('connection', (socket) => {
     if (!rooms[room]) {
       rooms[room] = []; // Create a new empty array for the room
     }
+    if (!messageCounts[room]) {
+      messageCounts[room] = 0; // Initialize the message count for the room
+    }
 
     // Send existing chat messages for the room to the user
     socket.emit('chatMessage', rooms[room]);
@@ -57,14 +61,26 @@ io.on('connection', (socket) => {
 
   // Handle chat messages
   socket.on('sendMessage', ({ room, message }) => {
+    // console.log("TESTING");
     if (message && message.text.trim() !== '') {
+      // console.log("TESTING");
       console.log(`Message in room ${room}:`, message);
-
+      // console.log("TESTING1");
       // Save the message in the room's history
       if (!rooms[room]) {
         rooms[room] = []; // Initialize the room if it doesn't exist
       }
       rooms[room].push(message);
+
+      // Increment the message count for the room
+      if (!messageCounts[room]) {
+        messageCounts[room] = 0;
+      }
+      messageCounts[room] += 1;
+
+      // console.log("TESTING2");
+      // Log the message count to the console
+      console.log(`Room ${room}: ${messageCounts[room]} messages`);
 
       // Broadcast the message to all clients in the room
       io.to(room).emit('chatMessage', message);
